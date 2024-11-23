@@ -1,108 +1,61 @@
 :root{
-    --font-mono: ui-monospace, Menlo, Monaco, 'Cascadia Mono', 'Segoe UI Mono',
-    'Roboto Mono', 'Oxygen Mono', 'Ubuntu Monospace', 'Source Code Pro',
-    'Fira Mono', 'Droid Sans Mono', 'Courier New', monospace;
-    --transition: all 0.1s cubic-bezier(0.645, 0.045, 0.355, 1)
+
+    --transition: all 0.1s cubic-bezier(0.645, 0.045, 0.355, 1);
+    --color-primary: #003DFF; /* Azul */
+    --color-secondary: #0056E7; /* Azul más oscuro */
 }
 
 * {
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-body{
-    font-family: var(--font-mono);
+body {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
-section{
-    display:flex;
-    flex-wrap: wrap;
-    height: 100vh;
-    align-items: center;
+section {
+    display: flex;
     justify-content: center;
+    align-items: center;
+    min-height: 100vh; /* Aseguramos que la sección ocupe al menos toda la altura de la ventana */
     flex-direction: column;
     padding: 1em;
 }
 
-section h1{
+section h1 {
     font-size: 3em;
 }
 
-section h2{
-    text-align:center;
+section h2 {
+    text-align: center;
     width: 100%;
     margin-bottom: 1em;
-    font-size: 2.5em
+    font-size: 2.5em;
 }
 
-section form{
-    padding: 1.5em;
-    display:flex;
-    flex-wrap: wrap;
-    max-width: 500px;
-    border-radius: 20px;
-    border: 2px solid rgba(0,0,0,.1);
-}
-
-section form label{
-    width: 100%;
-    padding: 0.2em;
-    margin-bottom: 0.5em;
-}
-
-section form input{
-    width: 100%;
-    margin-bottom: 1em;
-    padding: 0.8em;
-    border-radius: 9px;
-    border: none;
-    outline-color: #003DFF;
-    background-color: #eee;
-}
-
-section form input[type='submit']{
-    cursor: pointer;
-    margin-top: 1.5em;
-    background-color: #003DFF;
-    color: #fff;
-    font-family: var(--font-mono);
-    transition: var(--transition);
-} 
-
-section form input[type='submit']:active{
-    transform: scale(0.97);
-}
-
-section p{
-    margin-top: 1.5em;
-
-}
-
-
-section p a{
-    text-decoration: none;
-    color: #ff00bf;
-}
-
-
-
-/* Estilos para el formulario de reseñas */
 section form {
     padding: 20px;
     display: flex;
-    flex-wrap: wrap;
-    max-width: 500px;
+    flex-direction: column; /* Apilar los elementos de forma vertical */
+    justify-content: flex-start; /* Asegurarse de que el contenido esté alineado desde la parte superior */
+    align-items: center; /* Centrar los elementos horizontalmente */
+    max-width: 600px; /* Ancho máximo */
+    width: 90%; /* Ancho del formulario en pantallas pequeñas */
     border-radius: 10px;
-    border: 2px solid #db1bdb;
-    background-color: #080202;
+    border: 2px solid var(--color-primary);
+    background-color: #ffffff;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    margin-bottom: 20px;
 }
 
 section form label {
     width: 100%;
     padding: 0.2em;
     margin-bottom: 0.5em;
-    color: #ffffff;
+    color: #333;
 }
 
 section form input,
@@ -112,41 +65,64 @@ section form textarea {
     margin-bottom: 1em;
     padding: 10px;
     border-radius: 5px;
-    border: 1px solid #db1bc1;
-    outline-color: #db1bc1;
-    background-color: #ffffff;
-    color: #000000;
+    border: 1px solid #cccccc;
+    outline-color: var(--color-primary);
+    background-color: #f9f9f9;
+    color: #333;
 }
 
 section form input[type='submit'] {
     cursor: pointer;
     margin-top: 1.5em;
-    background-color: #db1b9e;
-    color: #ffffff;
-    font-family: "Poppins", sans-serif;
+    background-color: var(--color-primary);
+    color: #fff;
+    font-family: var(--font-mono);
     font-weight: 700;
     border: none;
     border-radius: 5px;
-    transition: all 0.1s cubic-bezier(0.645, 0.045, 0.355, 1);
+    transition: var(--transition);
 }
 
 section form input[type='submit']:hover {
-    background-color: #ab1581;
+    background-color: var(--color-secondary);
+}
+
+section form input[type='submit']:active {
+    transform: scale(0.97);
 }
 
 section form p {
     margin-top: 1.5em;
-    color: #a7a7a7;
+    color: #777;
+    text-align: center; /* Centrar el texto */
 }
 
 section form p a {
     text-decoration: none;
-    color: #db1ba8;
+    color: var(--color-primary);
+    font-weight: bold;
 }
 
 section form select:focus,
 section form input:focus,
 section form textarea:focus {
-    border-color: #db1bcb;
+    border-color: var(--color-primary);
 }
 
+/* Evitar que el formulario se desborde y asegurar que sea flexible */
+section form {
+    overflow: auto;
+}
+
+/* Ajustar el espacio entre los campos del formulario */
+section form input,
+section form select {
+    margin-bottom: 1em;
+}
+
+/* Media query para pantallas grandes */
+@media (min-width: 768px) {
+    section form {
+        width: 50%; /* En pantallas grandes, el formulario será más ancho */
+    }
+}
