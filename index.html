@@ -16,7 +16,8 @@
                 <a href="#servicios">Servicios</a>
                 <a href="#productos">Productos</a>
                 <a href="#resenas">Reseñas</a>
-                <a id="logout" href="#" class="logout-button">Salir</a>
+                <a id="loginButton" href="iniciar_sesion.html" class="logout-button">Iniciar sesión</a>
+                <a id="logoutButton" href="#" class="logout-button" style="display:none;">Salir</a>
             </div>
         </nav>
     </div>
@@ -132,16 +133,29 @@
     
   
     <script>
-        const user = JSON.parse(localStorage.getItem('login_success')) || false
-        if(!user){
-        window.location.href = 'iniciar_sesion.html'
-        }
-        const logout = document.querySelector('#logout')
-        .addEventListener('click', ()=>{
-        alert('Hasta pronto!')
-        localStorage.removeItem('login_success')
-        window.location.href = 'iniciar_sesion.html'
-        })
-    </script>
+      // Verifica si hay un usuario logueado
+      const user = JSON.parse(localStorage.getItem('login_success')) || false;
+  
+      const loginButton = document.getElementById('loginButton');
+      const logoutButton = document.getElementById('logoutButton');
+  
+      // Si el usuario está logueado, muestra el botón de "Salir" y oculta el de "Iniciar sesión"
+      if (user) {
+          loginButton.style.display = 'none';
+          logoutButton.style.display = 'inline-block';
+      } else {
+          // Si no hay usuario logueado, muestra el botón de "Iniciar sesión"
+          loginButton.style.display = 'inline-block';
+          logoutButton.style.display = 'none';
+      }
+  
+      // Lógica para el botón de "Salir"
+      logoutButton.addEventListener('click', () => {
+          alert('Hasta pronto!');
+          localStorage.removeItem('login_success');
+          // Redirige al login después de cerrar sesión
+          window.location.href = 'iniciar_sesion.html';
+      });
+  </script>
   </body>
 </html>
