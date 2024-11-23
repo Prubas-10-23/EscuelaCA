@@ -4,27 +4,48 @@ body {
     font-family: Arial, sans-serif;
   }
   header {
-    background-color: #ff80ab;
+    background-color: #0e8abb;
     padding: 15px;
     text-align: center;
   }
   nav {
-    background-color: #ff99b3;
+    background-color: #30abe4;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px;
-  }
-  nav h1 {
-    margin: 0;
-  }
+    padding: 10px 20px;
+}
+
+.nav-left {
+    display: flex;
+    align-items: center;
+}
+
+.nav-logo {
+    height: 40px;
+    margin-right: 10px;
+}
+
+.nav-right a {
+    color: #4d93bb;
+    text-decoration: none;
+    padding: 10px 20px;
+    margin: 0 10px;
+    border-radius: 5px;
+    background-color: #eeedf0;
+    transition: background-color 0.3s;
+}
+
+.nav-right a:hover {
+    background-color: #60b2ff;
+}
   nav a {
     color: #fff;
     text-decoration: none;
     padding: 10px 20px;
     margin: 0 10px;
     border-radius: 5px;
-    background-color: #ff80ab;
+    background-color: #70b6e6;
   }
   section {
     padding: 20px;
@@ -63,10 +84,47 @@ body {
     color: #888;
   }
   .productos {
-    background-color: #ffd4e5; 
-  }
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    padding: 20px;
+    background-color: #f6f9fa;
+}
+
+.card {
+    position: relative;
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 15px;
+    margin: auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 100%;
+    max-width: 300px; /* Tamaño máximo de cada tarjeta */
+    transition: box-shadow 0.3s ease;
+}
+
+.card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.card:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.product-name {
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+.product-price {
+    color: #888;
+}
   .sobre-nosotros {
-    background-color: #ffc2d0; 
+    background-color: #c2ecff; 
   }
   .card {
     position: relative;
@@ -83,6 +141,7 @@ body {
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); 
   }
   
+  
   .card img {
     max-width: 100%;
     border-radius: 8px;
@@ -95,7 +154,7 @@ body {
   
   .product-price {
     margin-top: 5px;
-    color: #888;
+    color: #888888;
   }
 
 
@@ -111,7 +170,7 @@ body {
   }
   
   .reviews-section {
-    background-color: #fce4ec; 
+    background-color: #fdfeff; 
     padding: 50px 0;
     text-align: center;
   }
@@ -123,7 +182,7 @@ body {
   }
   
   .review-card {
-    background-color: #fff;
+    background-color: #f1f2f3;
     border-radius: 8px;
     padding: 20px;
     margin: 20px;
@@ -141,7 +200,7 @@ body {
     font-size: 18px;
     font-weight: bold;
     margin-bottom: 10px;
-    color: #ff80ab; 
+    color: #abd2ec; 
   }
   
   .review-content {
@@ -154,7 +213,7 @@ body {
   }
 
   footer {
-    background-color: #ff80ab; 
+    background-color: #a9cbf0; 
     color: #fff;
     text-align: center;
     padding: 10px;
@@ -175,7 +234,7 @@ body {
 }
 
 .acercade {
-  color: #ff80ab; 
+  color: #acd6f1; 
 }
 
 .acerca-de__def {
