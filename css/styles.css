@@ -6,24 +6,39 @@ body {
   header {
     background-color: #0e8abb;
     padding: 15px;
-    text-align: center;
-  }
-  nav {
+    display: flex; /* Activar flexbox */
+    align-items: center; /* Alinear verticalmente */
+    justify-content: space-between; /* Separar logo y título */
+}
+
+.header-logo {
+    height: 60px; /* Ajusta el tamaño del logo */
+    width: auto; /* Mantén la proporción de la imagen */
+}
+
+header h1 {
+    margin: 0;
+    font-size: 24px; /* Ajusta el tamaño del texto si es necesario */
+    color: white;
+    text-align: right; /* Opcional, alinea el texto dentro de su área */
+}
+
+nav {
     background-color: #30abe4;
     display: flex;
-    justify-content: space-between;
+    justify-content: center; /* Centra el contenido del menú */
     align-items: center;
     padding: 10px 20px;
 }
 
 .nav-left {
-    display: flex;
-    align-items: center;
+    display: none; /* Ocultamos la sección izquierda, ya que no se usa en este diseño */
 }
 
-.nav-logo {
-    height: 40px;
-    margin-right: 10px;
+.nav-right {
+    display: flex;
+    justify-content: center; /* Centra los enlaces del menú */
+    gap: 15px; /* Espaciado entre los enlaces */
 }
 
 .nav-right a {
@@ -85,30 +100,32 @@ body {
   }
   .productos {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 20px;
+    grid-template-columns: repeat(3, 1fr); /* Tres columnas por fila */
+    gap: 40px; /* Mayor separación entre las tarjetas */
     padding: 20px;
     background-color: #e1e3e1;
 }
 
 .card {
     position: relative;
-    background-color: #e1e3e1;
+    background-color: #fff; /* Fondo blanco para mayor contraste */
     border-radius: 8px;
-    padding: 15px;
+    padding: 0; /* Sin padding interno para aprovechar el espacio */
     margin: auto;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     text-align: center;
+    max-width: 300px; /* Ancho máximo de las tarjetas */
     width: 100%;
-    max-width: 300px; /* Tamaño máximo de cada tarjeta */
     transition: box-shadow 0.3s ease;
+    height: 400px; /* Altura fija para un diseño uniforme */
 }
 
 .card img {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-    border-radius: 8px;
+    width: 100%; /* Imagen ocupa todo el ancho del contenedor */
+    height: 70%; /* Imagen ocupa 70% del contenedor */
+    object-fit: cover; /* Se adapta al contenedor manteniendo proporciones */
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
 }
 
 .card:hover {
@@ -118,43 +135,16 @@ body {
 .product-name {
     font-weight: bold;
     margin: 10px 0;
+    font-size: 16px;
 }
 
 .product-price {
     color: #888;
+    margin-bottom: 10px;
+    font-size: 14px;
 }
   .sobre-nosotros {
     background-color: #c2ecff; 
-  }
-  .card {
-    position: relative;
-    background-color: #fff;
-    border-radius: 8px;
-    padding: 20px;
-    margin: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    text-align: center;
-    transition: box-shadow 0.3s ease; 
-  }
-  
-  .card:hover {
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); 
-  }
-  
-  
-  .card img {
-    max-width: 100%;
-    border-radius: 8px;
-  }
-  
-  .product-name {
-    margin-top: 10px;
-    font-weight: bold;
-  }
-  
-  .product-price {
-    margin-top: 5px;
-    color: #888888;
   }
 
 
@@ -213,14 +203,12 @@ body {
   }
 
   footer {
-    background-color: #a9cbf0; 
-    color: #fff;
+    background-color: #a9cbf0;
     text-align: center;
-    padding: 10px;
-    position: fixed;
-    bottom: 0;
+    padding: 0;
     width: 100%;
-  }
+    margin-top: 20px; /* Espacio superior opcional para separarlo del contenido */
+}
 
   .nosotros {
   position: absolute;
@@ -239,6 +227,31 @@ body {
 
 .acerca-de__def {
   color: #555; 
+}
+
+@media (max-width: 480px) {
+  .productos {
+      grid-template-columns: 1fr; /* Una sola columna por fila */
+      gap: 20px; /* Menor separación entre las tarjetas */
+      padding: 10px; /* Reducir el padding general */
+  }
+
+  .card {
+      max-width: 100%; /* Tarjetas ocupan todo el ancho del contenedor */
+      height: auto; /* Altura automática para evitar recortes en pantallas pequeñas */
+  }
+
+  .card img {
+      height: auto; /* Permitir que la imagen se adapte proporcionalmente */
+  }
+
+  .product-name {
+      font-size: 14px; /* Reducir tamaño del texto para pantallas pequeñas */
+  }
+
+  .product-price {
+      font-size: 12px; /* Reducir tamaño del texto para pantallas pequeñas */
+  }
 }
 
 
