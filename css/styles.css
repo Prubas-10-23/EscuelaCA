@@ -52,7 +52,7 @@ body {
     text-align: center;
   }
   .services-section {
-    background-color: #f5f5f5;
+    background-color: #e1e3e1;
     padding: 50px 0;
     text-align: center;
   }
@@ -88,12 +88,12 @@ body {
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 20px;
     padding: 20px;
-    background-color: #f6f9fa;
+    background-color: #e1e3e1;
 }
 
 .card {
     position: relative;
-    background-color: #fff;
+    background-color: #e1e3e1;
     border-radius: 8px;
     padding: 15px;
     margin: auto;
@@ -170,7 +170,7 @@ body {
   }
   
   .reviews-section {
-    background-color: #fdfeff; 
+    background-color: #e1e3e1; 
     padding: 50px 0;
     text-align: center;
   }
