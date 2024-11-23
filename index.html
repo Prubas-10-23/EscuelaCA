@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/styles.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ana</title>
+</head>
+<body>
+
+    <header>
+        <h1>Lina Lagares</h1>
+      </header>
+    
+      <nav>
+        <h1>Moda y Estilo</h1>
+        <div>
+          <a href="#productos">Productos</a>
+          <a href="contacto.html">Contacto</a>
+          <a href="#resenas">Reseñas</a>
+          <a id="logout" href="#" class="logout-button">Salir</a>
+          
+        </div>
+      </nav>
+    
+      <div class="fondo">
+        <img src="img/empresa.jpeg" alt="Fondo" class="fondo__img">
+
+        <div class="nosotros">
+            <h2 class="acercade" id="nosotros">¿Quienes somos?</h2>
+            <p class="acerca-de__def">
+              Es una empresa de ropa para mujeres, contanos con una de las mejores calidades y telas ,creatividad en los tipos de ropa,colores llamativos y bonitos, manteniendo la belleza.
+            </p>
+        </div>
+    </div>
+    <section class="services-section">
+        <h2>Nuestros Servicios</h2>
+        <div class="services-container">
+          <div class="service-card">
+            <h3 class="service-title"> servicio al cliente.</h3>
+            <p class="service-description">Excelente servicio al cliente para nuestros visitantes</p>
+          </div>
+          <div class="service-card">
+            <h3 class="service-title"> Diseños personalizados.</h3>
+            <p class="service-description">Lindos diseños personalizados </p>
+          </div>
+          <div class="service-card">
+            <h3 class="service-title">Seguridad a la hora de realizar su compra</h3>
+            <p class="service-description">Ofrecemos seguridad para todos sus procesos y que pueda hacerlos seguro</p>
+          </div>
+        </div>
+      </section>
+    <section id="productos" class="productos">
+        <div class="card">
+            <img src="img/camiseta_1.jpeg" alt="Producto 1">
+            <div class="product-name">Camiseta basica</div>
+            <div class="product-price">$30.000</div>
+        </div>
+        <div class="card">
+            <img src="img/camiseta_2.jpeg" alt="Producto 1">
+            <div class="product-name">Blusa</div>
+            <div class="product-price">$40.000</div>
+        </div>
+        <div class="card">
+            <img src="img/camiseta_3.jpeg" alt="Producto 1">
+            <div class="product-name">Blusa hongos</div>
+            <div class="product-price">$30.000</div>
+        </div>
+    </section>
+  
+    <section id="resenas" class="reviews-section">
+        <h2>Reseñas de Clientes</h2>
+        <div class="reviews-container">
+          <div class="review-card">
+            <h3 class="review-title">Excelente Servicio y productos</h3>
+            <p class="review-content">Me gusta el servicio de atención al cliente.</p>
+            <p class="review-name"> Lina</p>
+          </div>
+          <div class="review-card">
+            <h3 class="review-title">Sobre los productos</h3>
+            <p class="review-content">Me encanta la calidad de la ropa.</p>
+            <p class="review-name"> María González</p>
+          </div>
+          <div class="review-card">
+            <h3 class="review-title">Buenos precios</h3>
+            <p class="review-content">Todo a buen precio y la ropa muy bonita.</p>
+            <p class="review-name">Carlos</p>
+          </div>
+        </div>
+      </section>
+  
+    <footer>
+      <p>&copy; 2023 Lina Lagares. </p>
+    </footer>
+  
+    <script>
+        const user = JSON.parse(localStorage.getItem('login_success')) || false
+        if(!user){
+        window.location.href = 'iniciar_sesion.html'
+        }
+        const logout = document.querySelector('#logout')
+        .addEventListener('click', ()=>{
+        alert('Hasta pronto!')
+        localStorage.removeItem('login_success')
+        window.location.href = 'iniciar_sesion.html'
+        })
+    </script>
+  </body>
+</html>
