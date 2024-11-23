@@ -1,29 +1,29 @@
 body {
-    margin: 0;
-    padding: 0;
-    font-family: Arial, sans-serif;
-  }
-  header {
-    background-color: #0e8abb;
-    padding: 15px 20px;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+header {
+  background-color: #0e8abb;
+  padding: 15px 20px;
 }
 
 /* Contenedor del header */
 .header-container {
-    display: flex; /* Activa Flexbox */
-    align-items: center; /* Centra verticalmente los elementos */
-    justify-content: space-between; /* Distribuye espacio entre los elementos */
-    gap: 20px; /* Espaciado entre los hijos del contenedor */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap; /* Cambié esto para que se ajuste mejor en pantallas pequeñas */
 }
 
 
 /* Estilo del título */
 header h1 {
-    margin: 0;
-    font-size: 24px;
-    color: rgb(0, 0, 0);
-    flex-grow: 1; /* Permite que el título ocupe el espacio restante */
-
+  margin: 0;
+  font-size: 24px;
+  color: rgb(0, 0, 0);
+  flex-grow: 1;
 }
 
 .nav-right {
@@ -31,39 +31,40 @@ header h1 {
   justify-content: center;
   align-items: center;
   gap: 15px;
+  flex-wrap: wrap; /* Permite que los enlaces se ajusten */
 }
 
 /* Estilo de los enlaces del menú, sin bordes ni contornos */
 .nav-right a {
-  color: #000000;  /* Texto negro */
+  color: #000000;
   text-decoration: none;
   padding: 10px 20px;
-  font-weight: bold;  /* Negrita */
-  background-color: transparent;  /* Sin fondo */
-  border: none;  /* Sin borde */
+  font-weight: bold;
+  background-color: transparent;
+  border: none;
   transition: background-color 0.3s, color 0.3s;
 }
 
 /* Efecto hover para los enlaces sin contorno */
 .nav-right a:hover {
-  background-color: #60b2ff;  /* Fondo azul cuando pasa el ratón */
-  border-radius: 10px; 
-  color: #ffffff;  /* Texto blanco al pasar el ratón */
+  background-color: #60b2ff;
+  border-radius: 10px;
+  color: #ffffff;
 }
 
 /* Estilo específico para el enlace de "Salir" con borde */
 #logout {
-  border: 2px solid #000000;  /* Borde negro */
-  border-radius: 10px;  /* Bordes redondeados */
-  padding: 10px 10px;  /* Relleno de 10px vertical y 20px horizontal */
-  background-color: #eeedf0;  /* Fondo claro */
-  color: #000000;  /* Texto negro */
+  border: 2px solid #000000;
+  border-radius: 10px;
+  padding: 10px 10px;
+  background-color: #eeedf0;
+  color: #000000;
 }
 
 /* Efecto hover para el enlace "Salir" */
 #logout:hover {
-  background-color: #70b6e6;  /* Fondo azul en hover */
-  color: white;  /* Texto blanco en hover */
+  background-color: #70b6e6;
+  color: white;
 }
   section {
     padding: 20px;
@@ -320,6 +321,41 @@ footer .social img {
 }
 
 
+/* Media Queries para pantallas pequeñas */
+@media (max-width: 768px) {
+  .header-container {
+      flex-direction: column; /* Los elementos del header se apilan verticalmente */
+      align-items: center; /* Centra los elementos */
+  }
+
+  h1 {
+      font-size: 18px; /* Reduce el tamaño del título */
+      text-align: center;
+  }
+
+  .nav-right a {
+      font-size: 14px; /* Ajusta el tamaño de los enlaces */
+      padding: 8px 15px; /* Ajusta los padding */
+  }
+
+  .fondo__img {
+      max-height: 300px; /* Ajusta la altura de la imagen */
+  }
+
+  nav {
+      flex-wrap: wrap;
+      justify-content: center;
+  }
+
+  .card {
+      max-width: 100%; /* Tarjetas ocupan el 100% del ancho */
+      height: auto; /* Deja que la altura se ajuste automáticamente */
+  }
+
+  .card img {
+      height: auto; /* La imagen se ajusta al contenedor */
+  }
+}
 
 
   
