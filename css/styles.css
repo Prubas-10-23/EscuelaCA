@@ -105,6 +105,16 @@ nav {
     padding: 20px;
     background-color: #e1e3e1;
 }
+#productos_title {
+  text-align: center;
+  font-size: 24px; /* Tamaño del texto */
+  font-weight: bold;
+  color: #000000; /* Color del texto */
+  background-color: #e1e3e1;
+}
+.productos-titulo{
+  background-color: #e1e3e1;
+}
 
 .card {
     position: relative;
@@ -203,12 +213,38 @@ nav {
   }
 
   footer {
-    background-color: #a9cbf0;
-    text-align: center;
-    padding: 0;
-    width: 100%;
-    margin-top: 20px; /* Espacio superior opcional para separarlo del contenido */
+    display: flex;
+    justify-content: space-between; /* Separa el texto y los íconos */
+    align-items: center; /* Alinea verticalmente ambos elementos */
+    padding: 20px;
+    background-color: #f8f8f8; /* Fondo del footer */
+    color: #333; /* Color del texto */
 }
+
+footer p {
+    margin: 0;
+    font-size: 16px;
+}
+
+footer .socials {
+    display: flex; /* Alinea los íconos horizontalmente */
+    gap: 15px; /* Espacio uniforme entre íconos */
+}
+
+footer .social {
+    width: 24px; /* Tamaño fijo para los íconos */
+    height: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+footer .social img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain; /* Mantiene las proporciones de los íconos */
+}
+
 
   .nosotros {
   position: absolute;
