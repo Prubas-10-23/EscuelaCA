@@ -14,7 +14,7 @@ header {
   align-items: center;
   justify-content: space-between;
   gap: 20px;
-  flex-wrap: wrap; /* Cambié esto para que se ajuste mejor en pantallas pequeñas */
+  flex-wrap: wrap; 
 }
 
 
@@ -31,7 +31,7 @@ header h1 {
   justify-content: center;
   align-items: center;
   gap: 15px;
-  flex-wrap: wrap; /* Permite que los enlaces se ajusten */
+  flex-wrap: wrap; 
 }
 
 /* Estilo de los enlaces del menú, sin bordes ni contornos */
@@ -104,16 +104,16 @@ header h1 {
   }
   .productos {
     display: grid;
-    grid-template-columns: repeat(3, 1fr); /* Tres columnas por fila */
-    gap: 40px; /* Mayor separación entre las tarjetas */
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 40px; 
     padding: 20px;
     background-color: #e1e3e1;
 }
 #productos_title {
   text-align: center;
-  font-size: 24px; /* Tamaño del texto */
+  font-size: 24px; 
   font-weight: bold;
-  color: #000000; /* Color del texto */
+  color: #000000; 
   background-color: #e1e3e1;
 }
 .productos-titulo{
@@ -122,22 +122,22 @@ header h1 {
 
 .card {
     position: relative;
-    background-color: #fff; /* Fondo blanco para mayor contraste */
+    background-color: #fff; 
     border-radius: 8px;
-    padding: 0; /* Sin padding interno para aprovechar el espacio */
+    padding: 0; 
     margin: auto;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     text-align: center;
-    max-width: 300px; /* Ancho máximo de las tarjetas */
+    max-width: 300px; 
     width: 100%;
     transition: box-shadow 0.3s ease;
-    height: 400px; /* Altura fija para un diseño uniforme */
+    height: 400px; 
 }
 
 .card img {
-    width: 100%; /* Imagen ocupa todo el ancho del contenedor */
-    height: 70%; /* Imagen ocupa 70% del contenedor */
-    object-fit: cover; /* Se adapta al contenedor manteniendo proporciones */
+    width: 100%;
+    height: 70%; 
+    object-fit: cover; 
     border-top-left-radius: 8px;
     border-top-right-radius: 8px;
 }
@@ -192,7 +192,7 @@ header h1 {
     margin: 20px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     text-align: center;
-    width: 300px; /* Ancho máximo de cada tarjeta */
+    width: 300px; 
     transition: box-shadow 0.3s ease;
   }
   
@@ -218,7 +218,7 @@ header h1 {
 
   footer {
     display: flex;
-    justify-content: space-between; /* Separa el texto y los íconos */
+    justify-content: space-between; 
     align-items: center; /* Alinea verticalmente ambos elementos */
     padding: 20px;
     background-color: #f8f8f8; /* Fondo del footer */
@@ -232,11 +232,11 @@ footer p {
 
 footer .socials {
     display: flex; /* Alinea los íconos horizontalmente */
-    gap: 15px; /* Espacio uniforme entre íconos */
+    gap: 15px; 
 }
 
 footer .social {
-    width: 24px; /* Tamaño fijo para los íconos */
+    width: 24px; 
     height: 24px;
     display: flex;
     justify-content: center;
@@ -246,7 +246,7 @@ footer .social {
 footer .social img {
     width: 100%;
     height: 100%;
-    object-fit: contain; /* Mantiene las proporciones de los íconos */
+    object-fit: contain; 
 }
 
 
@@ -259,7 +259,7 @@ footer .social img {
   padding: 20px;
   border-radius: 8px;
   max-width: 600px; 
-  text-align: center; /* Asegura que el texto esté centrado */
+  text-align: center; 
 }
 
 .acercade {
@@ -272,74 +272,73 @@ footer .social img {
 
 @media (max-width: 768px) {
   .nosotros {
-    position: relative; /* Cambia a relativo para evitar superposición */
-    top: 0; /* Reinicia la posición */
+    position: relative; 
+    top: 0; 
     left: 0;
-    transform: none; /* Quita la transformación */
-    margin: 20px auto; /* Centra el contenedor horizontalmente */
-    max-width: 90%; /* Reduce el ancho para adaptarse a pantallas pequeñas */
+    transform: none; 
+    margin: 20px auto; 
+    max-width: 90%; 
   }
 
   .fondo__img {
-    max-height: 300px; /* Reduce la altura de la imagen de fondo */
+    max-height: 300px; 
   }
 
   nav {
-    flex-wrap: wrap; /* Permite que los enlaces del menú se adapten */
-    justify-content: center; /* Asegura que estén centrados */
+    flex-wrap: wrap; 
+    justify-content: center; 
   }
 
   .nav-right a {
-    font-size: 14px; /* Reduce el tamaño del texto en enlaces */
-    padding: 5px 10px; /* Ajusta el espacio interno */
+    font-size: 14px; 
+    padding: 5px 10px; 
   }
 }
 
+/* Media Queries para pantallas pequeñas */
 @media (max-width: 480px) {
   .productos {
-      grid-template-columns: 1fr; /* Una sola columna por fila */
-      gap: 20px; /* Menor separación entre las tarjetas */
-      padding: 10px; /* Reducir el padding general */
+      grid-template-columns: 1fr; 
+      gap: 20px; 
+      padding: 10px; 
   }
 
   .card {
-      max-width: 100%; /* Tarjetas ocupan todo el ancho del contenedor */
-      height: auto; /* Altura automática para evitar recortes en pantallas pequeñas */
+      max-width: 100%; 
+      height: auto; 
   }
 
   .card img {
-      height: auto; /* Permitir que la imagen se adapte proporcionalmente */
+      height: auto; 
   }
 
   .product-name {
-      font-size: 14px; /* Reducir tamaño del texto para pantallas pequeñas */
+      font-size: 14px; 
   }
 
   .product-price {
-      font-size: 12px; /* Reducir tamaño del texto para pantallas pequeñas */
+      font-size: 12px; 
   }
 }
 
-
-/* Media Queries para pantallas pequeñas */
 @media (max-width: 768px) {
   .header-container {
-      flex-direction: column; /* Los elementos del header se apilan verticalmente */
-      align-items: center; /* Centra los elementos */
+      flex-direction: column; 
+      align-items: center; 
   }
 
   h1 {
-      font-size: 18px; /* Reduce el tamaño del título */
+      font-size: 18px; 
       text-align: center;
   }
 
   .nav-right a {
-      font-size: 14px; /* Ajusta el tamaño de los enlaces */
-      padding: 8px 15px; /* Ajusta los padding */
+      font-size: 14px; 
+      padding: 8px 15px; 
   }
 
   .fondo__img {
-      max-height: 300px; /* Ajusta la altura de la imagen */
+      max-height: 300px; 
   }
 
   nav {
@@ -348,12 +347,12 @@ footer .social img {
   }
 
   .card {
-      max-width: 100%; /* Tarjetas ocupan el 100% del ancho */
-      height: auto; /* Deja que la altura se ajuste automáticamente */
+      max-width: 100%; 
+      height: auto;
   }
 
   .card img {
-      height: auto; /* La imagen se ajusta al contenedor */
+      height: auto; 
   }
 }
 
