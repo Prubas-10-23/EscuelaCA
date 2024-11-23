@@ -5,63 +5,66 @@ body {
   }
   header {
     background-color: #0e8abb;
-    padding: 15px;
-    display: flex; /* Activar flexbox */
-    align-items: center; /* Alinear verticalmente */
-    justify-content: space-between; /* Separar logo y título */
+    padding: 15px 20px;
 }
 
-.header-logo {
-    height: 60px; /* Ajusta el tamaño del logo */
-    width: auto; /* Mantén la proporción de la imagen */
+/* Contenedor del header */
+.header-container {
+    display: flex; /* Activa Flexbox */
+    align-items: center; /* Centra verticalmente los elementos */
+    justify-content: space-between; /* Distribuye espacio entre los elementos */
+    gap: 20px; /* Espaciado entre los hijos del contenedor */
 }
 
+
+/* Estilo del título */
 header h1 {
     margin: 0;
-    font-size: 24px; /* Ajusta el tamaño del texto si es necesario */
-    color: white;
-    text-align: right; /* Opcional, alinea el texto dentro de su área */
-}
+    font-size: 24px;
+    color: rgb(0, 0, 0);
+    flex-grow: 1; /* Permite que el título ocupe el espacio restante */
 
-nav {
-    background-color: #30abe4;
-    display: flex;
-    justify-content: center; /* Centra el contenido del menú */
-    align-items: center;
-    padding: 10px 20px;
-}
-
-.nav-left {
-    display: none; /* Ocultamos la sección izquierda, ya que no se usa en este diseño */
 }
 
 .nav-right {
-    display: flex;
-    justify-content: center; /* Centra los enlaces del menú */
-    gap: 15px; /* Espaciado entre los enlaces */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
 }
 
+/* Estilo de los enlaces del menú, sin bordes ni contornos */
 .nav-right a {
-    color: #4d93bb;
-    text-decoration: none;
-    padding: 10px 20px;
-    margin: 0 10px;
-    border-radius: 5px;
-    background-color: #eeedf0;
-    transition: background-color 0.3s;
+  color: #000000;  /* Texto negro */
+  text-decoration: none;
+  padding: 10px 20px;
+  font-weight: bold;  /* Negrita */
+  background-color: transparent;  /* Sin fondo */
+  border: none;  /* Sin borde */
+  transition: background-color 0.3s, color 0.3s;
 }
 
+/* Efecto hover para los enlaces sin contorno */
 .nav-right a:hover {
-    background-color: #60b2ff;
+  background-color: #60b2ff;  /* Fondo azul cuando pasa el ratón */
+  border-radius: 10px; 
+  color: #ffffff;  /* Texto blanco al pasar el ratón */
 }
-  nav a {
-    color: #fff;
-    text-decoration: none;
-    padding: 10px 20px;
-    margin: 0 10px;
-    border-radius: 5px;
-    background-color: #70b6e6;
-  }
+
+/* Estilo específico para el enlace de "Salir" con borde */
+#logout {
+  border: 2px solid #000000;  /* Borde negro */
+  border-radius: 10px;  /* Bordes redondeados */
+  padding: 10px 10px;  /* Relleno de 10px vertical y 20px horizontal */
+  background-color: #eeedf0;  /* Fondo claro */
+  color: #000000;  /* Texto negro */
+}
+
+/* Efecto hover para el enlace "Salir" */
+#logout:hover {
+  background-color: #70b6e6;  /* Fondo azul en hover */
+  color: white;  /* Texto blanco en hover */
+}
   section {
     padding: 20px;
     text-align: center;
@@ -246,7 +249,7 @@ footer .social img {
 }
 
 
-  .nosotros {
+.nosotros {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -255,6 +258,7 @@ footer .social img {
   padding: 20px;
   border-radius: 8px;
   max-width: 600px; 
+  text-align: center; /* Asegura que el texto esté centrado */
 }
 
 .acercade {
@@ -263,6 +267,31 @@ footer .social img {
 
 .acerca-de__def {
   color: #555; 
+}
+
+@media (max-width: 768px) {
+  .nosotros {
+    position: relative; /* Cambia a relativo para evitar superposición */
+    top: 0; /* Reinicia la posición */
+    left: 0;
+    transform: none; /* Quita la transformación */
+    margin: 20px auto; /* Centra el contenedor horizontalmente */
+    max-width: 90%; /* Reduce el ancho para adaptarse a pantallas pequeñas */
+  }
+
+  .fondo__img {
+    max-height: 300px; /* Reduce la altura de la imagen de fondo */
+  }
+
+  nav {
+    flex-wrap: wrap; /* Permite que los enlaces del menú se adapten */
+    justify-content: center; /* Asegura que estén centrados */
+  }
+
+  .nav-right a {
+    font-size: 14px; /* Reduce el tamaño del texto en enlaces */
+    padding: 5px 10px; /* Ajusta el espacio interno */
+  }
 }
 
 @media (max-width: 480px) {
